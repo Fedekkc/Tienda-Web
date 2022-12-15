@@ -1,0 +1,151 @@
+
+
+#navBar {
+    list-style:none;
+    padding: 10px;
+                            
+    max-width:   min(max-content, max(min-content, 920))
+   
+
+}
+header{
+  background: url(assets/fondo.jpg);
+  height: 100vh;
+  background-size: cover;
+}
+
+body{
+  margin: 0;
+  
+}
+
+
+
+#menuClass{
+    
+    z-index: 0;
+}
+.menu{
+    
+    list-style: none;
+    
+    display:flex;
+    justify-content:center;
+    
+    width: 80%;
+    max-width: auto;
+    margin: auto;
+
+
+}
+.menu li a{
+    text-decoration: none;
+
+
+    color:white;
+    
+    padding: 20px;
+    display: block;
+    z-index: -1;
+    
+
+}
+
+.menu li{
+    
+    background: #092327;
+    display: inline-block;       
+    text-align:center;            
+
+}
+.menu li ul{
+    
+    display:none;
+    
+    
+    position: absolute;
+    
+    
+
+}
+.menu li:hover > ul{
+               
+    display:grid;
+    
+}
+.menu li a:hover{
+
+    background: #ef8354;
+}
+.cartas{
+  margin-right: 50px;
+  margin-left: 50px;
+  
+  
+
+  display:flex;
+  
+  padding-top:50vh;
+
+
+}
+
+.flip-card {
+    
+    display:flex;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    margin:auto;
+    
+  }
+  .flip-card-inner {
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    
+    
+  }
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+  }
+  .flip-card-front {
+    background-image: linear-gradient(45deg, #c9a1a1, #5e3c36);
+  }
+  .flip-card-front img {
+    width: 220px;
+    margin-top: 1rem;
+  }
+  .flip-card-back {
+    background-image: linear-gradient(315deg, #000000, #8a045c);
+    color: #ffffff;
+    transform: rotateY(180deg);
+    
+  }
+  .flip-card-back img {
+    width: 140px;
+    margin-top: 1rem;
+  }
+  .flip-card-back h3 {
+    margin-bottom: 0.3rem;
+  }
+  .divisor{
+    background-color: black;
+    
+    height:10px;
+
+  }

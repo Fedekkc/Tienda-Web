@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- RANGOS
+      OWNER   0
+      MOD     1
+      USER    2  
+  -->
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    
+
+    
+
+</head>
+
+<body>
+  
+  <header>
+    <section id = "navBar"></section>
+  </header>
+  
+    <center> 
+      
+      <section id="galeria"></sec>
+
+
+
+    </center>
+        
+    
+    
+
+ 
+</body>
+<script type="module" src="./index.js"></script>
+
+<script>
+  
+   const imagenes = [
+  {
+    src: 'assets/redbull.png',
+    alt: 'Descripcion del producto!',
+    nombre: 'Bebida energetica RED BULL 500ml',
+    precio: '300'
+  },
+  {
+    src: 'assets/SuplementoProteico.jpg',
+    alt: 'Descripcion del producto!',
+    nombre: 'Suplemento Proteico WHEY GOLD STANDARD',
+    precio: '2500'
+  },
+  {
+    src: 'assets/Banda_elastica.jpg',
+    alt: 'Descripcion del producto!',
+    nombre: 'Banda elástica para entrenar',
+    precio: '2000'
+  },
+  {
+    src: 'assets/Mancuernas.jpg',
+    alt: 'Descripcion del producto!',
+    nombre: 'Mancuerna 10KG',
+    precio: '5000'
+  },
+  {
+    src: 'assets/Pesas_Tobillos.jpg',
+    alt: 'Descripcion del producto!',
+    nombre: 'Pesas para tobillos 2KG',
+    precio: '1500'
+  },
+  {
+    src: 'assets/Barra_olimpica.jpg',
+    alt: 'Descripcion del producto!',
+    nombre: 'Barra olimpica 20KG',
+    precio: '5000'
+  },
+  {
+    src: 'assets/Banco_Salto.jpg',
+    alt: 'Descripcion del producto!',
+    nombre: 'Banco de salto pliometrico',
+    precio: '6000'
+  },
+  {
+    src: 'assets/Barra_Dominadas.jpg',
+    alt: 'Descripcion del producto!',
+    nombre: 'Barra para dominadas hasta 150KG',
+    precio: '25000'
+  } ];
+
+  function renderGaleria(imagenes)
+  {
+    let html = ' ';
+    imagenes.forEach(function(imagen){
+      html += `
+      <div class = "gallery-item">
+        <img src ="${imagen.src}" alt ="${imagen.alt}" width="150px" />
+        <div class ="gallery-item-text">
+        <h3> ${imagen.nombre} </h3>
+        <p> $${imagen.precio}</p></div></div>
+      `;
+
+    });
+    $('#galeria').html(html);
+  }
+  
+
+  renderGaleria(imagenes);
+  
+  
+  
+  
+</script>
+
+
+
+</html>
